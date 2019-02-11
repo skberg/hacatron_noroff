@@ -1,0 +1,187 @@
+.contentcontainer {
+    padding: 0;
+}
+
+.grey-margin {
+    padding: 20px;
+    background-color: $grey-margin-color;
+}
+
+.whosection {
+    font-weight: 100;
+    font-size: 12px;
+    background-color: $white-color;
+    padding-top: 20px;
+    color: $text-color;
+    margin-left: 1.5%;
+    padding-left: 20px;
+    width: 48.5%;
+    height: 100%;
+    min-height: 820px;
+    border-right: 1px solid $text-color;
+
+    &__breakline {
+        border-color: $text-color;
+    }
+
+    &__image {
+        width: 100%;
+    }
+    
+    &__row {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+    &__ourstaff {
+        margin-bottom: 20px;
+        padding-right: 0px;
+        padding-left: 0;
+        
+        &--image {
+            width: 93%;
+            height: 100%;
+            max-height: 200px;
+
+        }
+    }
+}
+
+
+
+.hoverlay {
+    width: 93%; 
+    //height: 80%;
+    height: 100%;
+    position: relative; 
+    margin: 0px; 
+    display: inline-block;
+    
+    &__info {
+        background-color: rgba(34,184,179,.8); 
+        width: 93%; 
+        height: 100%; 
+        //max-height: 80%;
+        position: absolute; 
+        top: 0px; 
+        left: 1px;
+        display: none;
+        
+        &--tablecontainer {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &--tablecell {
+            padding-top: 15px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        &--textcontainer {
+            text-align: center;
+            color: $white-color;
+            font-size: 1rem; 
+        }
+        
+        &--headline {
+            margin: 0;
+        }
+    }
+}
+
+
+
+
+
+.skillsection {
+    font-size: 12px;
+    @include clearfix;
+    background-color: $white-color;
+    color: $text-color;
+    width: 48.5%;
+    height: 100%;
+    padding-right: 20px;
+
+    &__skilltext {
+        float: left;
+        margin-bottom: 0;
+    }
+
+    &__percentagetext {
+        float: right;
+        margin-bottom: 0;
+    }
+
+    &__skillbar {
+        clear: both;
+        border: 1px solid $grey-color;
+        margin-bottom: 10px;
+        &--design {
+            @include skillpercentage();
+            width: 89%;
+        }
+
+        &--development {
+            @include skillpercentage();
+            width: 97%;
+        }
+
+        &--plugins {
+            @include skillpercentage();
+            width: 85%;
+        }
+
+        &--frontend {
+            @include skillpercentage();
+            width: 75%;
+        }
+    }
+
+    &__testimonial {
+        @include clearfix;
+        height: 100px;
+
+        &--header {
+            height: 50px;
+            width: 100%;
+            border: 1px solid $text-color;
+            background-color: $green-color;
+        }
+
+        &--image {
+            width: 48px;
+            float: left;
+        }
+
+        &--name {
+            line-height: 48px;
+            padding-left: 70px;
+            color: $white-color;
+        }
+
+        &--text {
+            border-left: 1px solid $text-color;
+            border-bottom: 1px solid $text-color;
+            border-right: 1px solid $text-color;
+            padding: 10px;
+        }
+    }
+
+    &__services {
+        padding-top: 25px;
+
+        &--list {
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+        
+        &--item {
+            margin-bottom: 5px;
+        }
+
+    }
+
+}

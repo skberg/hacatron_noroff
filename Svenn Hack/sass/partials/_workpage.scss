@@ -1,0 +1,112 @@
+#workpageBody{
+    background-color: grey;
+    padding: 10px;
+}
+
+.workpageContainer{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+.workpage{
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: white;
+    &--carousel{
+        border-right: 1px solid lightgrey;
+        margin-bottom: 0;
+    }
+    &--info{
+        & span{
+            color: rgb(45, 174, 190) !important;
+        }
+    }
+    &--text{
+        @extend .workpage--carousel;
+    }
+    &--project{
+        &__gallery{
+            & img{
+                margin: 5px;
+            }
+        }
+        &__image{
+            height: 50px;
+            width: auto;
+        }
+    }
+    &--related{
+        border-right: 1px solid lightgray;
+        &__image{
+            width: 160px;
+            height: 50%;
+        }
+    }
+    &--features{
+        &__content{
+            font-size: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .workpage{
+        &--carousel{
+            border: none !important;
+            margin: 10px;
+        }
+        &--text{
+            border: none !important;
+            margin: 10px;
+        }
+        &--related{
+            border: none !important;
+            margin: 20px;
+            &__image{
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &--project{
+            &__gallery{
+                & img{
+                    margin: 5px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px){
+    .workpage{
+        &--carousel{
+            border: none !important;
+        }
+        &--related{
+            border: none !important;
+            &__image{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &--text{
+            border: none !important;
+        }
+        &--project{
+            &__gallery{
+                & img{
+                    margin: 5px;
+                    width: 50%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

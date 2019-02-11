@@ -1,0 +1,129 @@
+.hamburgerMenu {
+  position: fixed;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 9999;
+  background-color: $sidebarColor;
+  color: white;
+  padding: 2px 12px;
+  display: none;
+}
+
+.sidenav {
+  background-color: $sidebarColor;
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+
+  &__closebtn {
+    display: none;
+  }
+
+  &__menuImg {
+
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    text-align: right;
+    border-bottom: $sidebarColor solid 1px;
+
+    &--link {
+      text-decoration: none;
+      display: block;
+      padding: 1rem 2rem;
+      color: white;
+      background-color: #2E3639;
+    }
+
+    &--link:hover {
+      text-decoration: none;
+      color: white;
+      background-color: $menuBtnHover;
+    }
+  }
+
+  &__active {
+    background-color: $menuBtnHover;
+  }
+
+  &__miniMenu {
+    text-align: right;
+    padding-right: 2rem;
+
+    &--filter {
+      color: $menuBtnHover;
+      font-size: 17px;
+    }
+
+    &--filter:hover {
+      color: $menuBtnHover;
+    }
+  }
+
+  &__icons {
+    padding-left: 5px;
+  }
+
+  &__grayTxt {
+    color: gray;
+  }
+
+  &__hover:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  &__paddingTop {
+    padding-top: 3rem;
+  }
+}
+
+.site {
+  margin-left: 250px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburgerMenu {
+    display: inline;
+  }
+
+  .sidenav {
+    width: 0;
+    overflow-x: hidden;
+
+    &__closebtn {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .site {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .sidenav {
+    width: 250px !important;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .sidenav {
+
+    &__miniMenu {
+      display: none;
+    }
+  }
+}

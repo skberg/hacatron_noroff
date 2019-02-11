@@ -1,0 +1,27 @@
+{
+  "name": "test31",
+  "version": "1.0.0",
+  "description": "Hackethon for Noroff Student FEU2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cameronmoodley/noroffHackethon.git"
+  },
+  "author": "Noroff Students",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cameronmoodley/noroffHackethon/issues"
+  },
+  "homepage": "https://github.com/cameronmoodley/noroffHackethon#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "dependencies": {}
+}
